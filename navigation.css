@@ -1,0 +1,91 @@
+.banner .top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2%;
+}
+.banner .top-header .logo {
+  padding: 2% 0;
+}
+.banner .top-header .logo p {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Akrobat bold";
+}
+.banner .top-header .menu {
+  background: linear-gradient(to left, #8860D0, #5AB9EA);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  opacity: 0;
+  transition: 0.4s ease;
+  z-index: 2;
+  height: 100vh;
+  max-width: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.banner .top-header .menu .menu-item {
+  padding: 20px;
+}
+.banner .top-header .menu .menu-item a {
+  color: #fff;
+  font-family: "Akrobat black";
+  font-size: 3.5rem;
+  text-decoration: none;
+}
+.banner .top-header .main-humb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  position: relative;
+}
+.banner .top-header .main-humb label {
+  font-size: 2rem;
+  padding-right: 15px;
+  color: white;
+  font-family: "Akrobat black";
+}
+.banner .top-header .main-humb .hamburger {
+  height: 3rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+}
+.banner .top-header .main-humb .hamburger .bar {
+  height: 0.3rem;
+  width: 100%;
+  background-color: #fff;
+}
+.banner .top-header .main-humb .hamburger #top {
+  transform: translateY(-6px);
+  transition: all 0.6s ease;
+}
+.banner .top-header .main-humb .hamburger #middle {
+  transition: all 0.6s ease;
+  width: 75%;
+  margin-left: 25%;
+}
+.banner .top-header .main-humb .hamburger #bottom {
+  transform: translateY(6px);
+  transition: all 0.6s ease;
+}
+.banner .top-header .open {
+  opacity: 1;
+  max-width: 100%;
+}
+.banner .top-header .open .hamburger #top {
+  transform: translateY(4px) rotate(-135deg);
+}
+.banner .top-header .open .hamburger #middle {
+  opacity: 0;
+}
+.banner .top-header .open .hamburger #bottom {
+  transform: translateY(-2px) rotate(495deg);
+}/*# sourceMappingURL=navigation.css.map */

@@ -1,0 +1,40 @@
+// variables
+$mainColor:#8860D0;
+$subColor:#fff;
+$regular:'Akrobat regular';
+$bold: 'Akrobat bold';
+$black:'Akrobat black';
+
+.banner{ 
+    .top-header{
+        display:flex;justify-content: space-between;padding: 0 2%;
+        .logo{padding:2% 0;
+            p{color:white;font-size: 1.5rem;font-family: $bold;}
+           }
+            .menu{background:linear-gradient(to left, #8860D0,#5AB9EA);position: absolute;top: 0;right:0;width: 100vw;opacity: 0;transition: .4s ease;z-index: 2;height :100vh;max-width: 0;overflow: hidden;display: flex;justify-content: center;text-align: center;flex-direction: column;
+            .menu-item{padding:20px;
+            a{color: $subColor;font-family:$black;font-size: 3.5rem;text-decoration: none; }
+            }
+            }
+            .main-humb{display: flex;justify-content: center;align-items:center;z-index: 9;position: relative;
+                label{font-size:2rem;padding-right:15px;color: white;font-family: $black;}
+                .hamburger{height: 3rem;width: 4rem;display: flex;justify-content: center;flex-direction: column;z-index: 2;
+                    .bar{height: .3rem;width: 100%;background-color:$subColor ;}
+                    #top{transform: translateY(-6px);transition: all .6s ease;}
+                    #middle{transition: all .6s ease;width: 75%;margin-left: 25%;}
+                    #bottom{transform: translateY(6px);transition: all .6s ease;}
+                    }
+            }
+           
+            .open{opacity: 1;max-width: 100%;
+               .hamburger{
+                #top{transform: translateY(4px) rotate(-135deg);}
+                #middle{opacity: 0;}
+                #bottom{transform: translateY(-2px) rotate(495deg)}
+               }
+            }
+
+
+    }
+    
+}

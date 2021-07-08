@@ -1,0 +1,33 @@
+@font-face{
+    font-family: 'Akrobat black';
+    font-style: normal;
+    font-weight: 100;
+    src:url(akro/Akrobat-Black_1.woff);
+}
+@font-face{
+    font-family: 'Akrobat regular';
+    font-style: normal;
+    font-weight: 100;
+    src:url(akro/Akrobat-Regular_1.woff);
+}
+
+@font-face{
+    font-family: 'Akrobat bold';
+    font-style: normal;
+    font-weight: 100;
+    src:url(akro/Akrobat-Bold.woff2);
+}
+
+@font-face{
+    font-family: 'Akrobat ExtraBold';
+    font-style: normal;
+    font-weight: 100;
+    src:url(akro/Akrobat-ExtraBold.woff);
+}
+
+@font-face{
+    font-family: 'Akrobat SemiBold';
+    font-style: normal;
+    font-weight: 100;
+    src:url(akro/Akrobat-SemiBold.woff2);
+}

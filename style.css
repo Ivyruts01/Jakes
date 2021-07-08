@@ -1,0 +1,2616 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@-webkit-keyframes widthGrow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 4rem;
+  }
+}
+
+@keyframes widthGrow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 4rem;
+  }
+}
+.banner {
+  flex-direction: column-reverse;
+}
+.banner .banner-header {
+  background: linear-gradient(to left, #8860D0, #5AB9EA);
+}
+.banner .banner-header .banner-text {
+  text-align: right;
+  padding: 0 2%;
+}
+.banner .banner-header .banner-text h2 {
+  color: #fff;
+  font-size: 30px;
+  padding: 25px 0;
+  font-family: "Akrobat black";
+}
+.banner .banner-header .banner-text p {
+  color: #fff;
+  line-height: 1.5;
+  font-family: "Akrobat bold";
+  white-space: pre-line;
+  padding-bottom: 10px;
+}
+.banner .banner-header .banner-text a {
+  color: #fff;
+  padding: 10px 0;
+  font-family: "Akrobat ExtraBold";
+  position: relative;
+  font-size: 1.5rem;
+}
+.banner .banner-header .banner-text a::before {
+  content: "";
+  background-color: #fff;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: -60%;
+  top: 44%;
+}
+.banner .banner-header .banner-text button {
+  padding: 10px;
+}
+.banner .banner-header .banner-text button a {
+  color: #fff;
+  padding: 10px 0;
+  font-family: "Akrobat regular";
+}
+.banner .banner-header .banner-text button a::before {
+  display: none;
+}
+.banner .banner-header .banner-text form {
+  padding: 20px 0;
+}
+.banner .banner-header .banner-text form input[type=checkbox] + label {
+  cursor: pointer;
+  color: #fff;
+  font-family: "Akrobat bold";
+  margin-right: 0.5rem;
+}
+.banner .banner-header .banner-text form input[type=checkbox] {
+  display: none;
+  margin-bottom: 0.5em;
+}
+.banner .banner-header .banner-text form input[type=checkbox] + label:before {
+  content: "✔";
+  border: 3px solid #fff;
+  width: 20px;
+  height: 20px;
+  padding-right: 0.2em;
+  margin-right: 0.5rem;
+  color: transparent;
+  transition: 0.2s;
+}
+.banner .banner-header .banner-text form input[type=checkbox]:checked + label:before {
+  border-color: #1E4F7E;
+  color: #000000;
+}
+.banner .banner-header .banner-text form input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+.banner .banner-header .banner-text form input[type=checkbox] :checked:disabled + label:before {
+  transform: scale(1);
+  border-color: #1E4F7E;
+  color: #1E4F7E;
+}
+.banner .banner-header .banner-text form .form-inner {
+  display: flex;
+  padding-top: 30px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.banner .banner-header .banner-text form .form-inner button {
+  background-color: transparent;
+  border: 5px solid #fff;
+  width: 100%;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.banner .banner-header .banner-text form .form-inner button a {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Akrobat bold";
+}
+.banner .banner-header .banner-text form .form-inner button a img {
+  width: 20px;
+}
+
+.stories {
+  padding: 5%;
+  text-align: left;
+  margin-top: 20px;
+}
+.stories h2 {
+  padding: 10px 0;
+  font-size: 30px;
+  font-family: Akrobat regular;
+}
+.stories p {
+  line-height: 1.2;
+  font-family: "Akrobat regular";
+  font-size: 1.5rem;
+}
+
+.Tabs {
+  padding: 10% 5%;
+}
+.Tabs .tabs-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 5%;
+  border-radius: 5px;
+  box-shadow: 0px 2px 29px #00000024;
+  display: flex;
+  margin-bottom: 3rem;
+}
+.Tabs .tabs-inner .tab-scroll {
+  margin: 20px;
+  width: 2px;
+  height: 80%;
+  top: 0;
+  left: 0;
+  background: black;
+  position: absolute;
+}
+.Tabs .tabs-inner .tab-scroll .scrollbar {
+  width: 4px;
+  height: 20%;
+  background-color: #8760D0;
+  position: absolute;
+  transform: translateX(-1);
+  transition: 700ms;
+  top: 5%;
+}
+.Tabs .tabs-inner .side-tabs {
+  width: 100%;
+}
+.Tabs .tabs-inner .side-tabs label {
+  padding: 20px;
+  display: block;
+  margin: 5px 0 5px 15px;
+  color: #6d7278;
+  font-family: "Akrobat regular";
+  font-size: 1.5rem;
+  transition: 700ms;
+}
+.Tabs .tabs-inner .side-tabs .active {
+  color: #8860D0;
+  font-weight: bold;
+}
+.Tabs .tabs-infor {
+  overflow: hidden;
+  background-color: #8760D0;
+  color: white;
+  padding: 5%;
+  border-radius: 5px;
+  position: relative;
+  height: calcu(40%);
+  padding: 5%;
+}
+.Tabs .tabs-infor .list {
+  position: absolute;
+  top: -200%;
+  opacity: 0;
+  margin-top: 5px;
+  transform: scale(0.1);
+  transition: opacity 500ms ease-in-out 0ms;
+  font-family: "Akrobat regular";
+}
+.Tabs .tabs-infor .active {
+  top: 0;
+  opacity: 1;
+  transform: scale(1);
+  margin-top: 0;
+  height: auto;
+  position: relative;
+}
+.Tabs .tabs-infor .active h3 {
+  font-size: 1.5rem;
+  margin: 5% 0;
+  font-family: "Akrobat bold";
+}
+.Tabs .tabs-infor .active p {
+  font-size: 1.2rem;
+  font-family: "Akrobat bold";
+}
+.Tabs .tabs-infor .active ol {
+  list-style-type: revert;
+  font-size: 1.1rem;
+  padding: 5%;
+}
+
+.join {
+  padding: 5%;
+  background: linear-gradient(to right, #72B0E7, #7E99E0, #8C7DD8);
+  margin-top: 20px;
+}
+.join h2 {
+  padding: 10px 0;
+  font-size: 1.5rem;
+  font-family: "Akrobat bold";
+  color: #fff;
+  white-space: pre-line;
+}
+.join form {
+  padding: 20px 0;
+}
+.join form input[type=checkbox] + label {
+  cursor: pointer;
+  color: #fff;
+  margin: 0.2em;
+  font-family: "Akrobat bold";
+  margin-right: 0.5rem;
+}
+.join form input[type=checkbox] {
+  display: none;
+  margin-bottom: 0.5em;
+}
+.join form input[type=checkbox] + label:before {
+  content: "✔";
+  border: 3px solid #fff;
+  width: 25px;
+  height: 25px;
+  padding-right: 0.2em;
+  margin-right: 0.5rem;
+  color: transparent;
+  transition: 0.2s;
+}
+.join form input[type=checkbox]:checked + label:before {
+  border-color: #1E4F7E;
+  color: #000000;
+}
+.join form input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+.join form input[type=checkbox] :checked:disabled + label:before {
+  transform: scale(1);
+  border-color: #1E4F7E;
+  color: #1E4F7E;
+}
+.join form .form-inner {
+  display: flex;
+  padding-top: 10px;
+}
+.join form .form-inner button {
+  background-color: transparent;
+  border: 3px solid #fff;
+  padding: 20px;
+}
+.join form .form-inner button a {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Akrobat bold";
+  text-decoration: none;
+}
+.join form .form-inner button a img {
+  width: 20px;
+}
+
+.applications {
+  text-align: center;
+  padding-top: 2%;
+  margin-top: 20px;
+}
+.applications h2 {
+  font-family: "Akrobat bold";
+  line-height: 1.1em;
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+}
+.applications .infor {
+  padding: 5%;
+}
+.applications .infor h3 {
+  font-family: "Akrobat bold";
+  padding: 10px;
+  font-size: 1.8rem;
+}
+.applications .infor p {
+  line-height: 1.2;
+  font-family: "Akrobat regular";
+  font-size: 12px;
+  color: #000000;
+  white-space: pre-line;
+  font-size: 1.2rem;
+}
+.applications .infor button {
+  margin: 15px;
+  border: 3px solid #89CFE6;
+  padding: 10px;
+  background: transparent;
+  position: relative;
+}
+.applications .infor button:before {
+  background: linear-gradient(to left, #8860D0, #59B9EA);
+  transform: scale(0);
+  direction: rtl;
+  transition: 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.applications .infor button a {
+  color: #063C70;
+  font-family: "Akrobat bold";
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.applications .infor button:hover {
+  color: #fff;
+  font-family: "Akrobat bold";
+  border: none;
+}
+.applications .infor button:hover:before {
+  transform: scale(1);
+}
+.applications .infor button:hover a {
+  color: #fff;
+  font-family: "Akrobat bold";
+}
+.applications .infor2 {
+  padding: 5%;
+}
+.applications .infor2 h3 {
+  font-family: "Akrobat bold";
+  padding: 10px;
+  font-size: 1.8rem;
+}
+.applications .infor2 p {
+  line-height: 1.2;
+  font-family: "Akrobat regular";
+  font-size: 12px;
+  color: #000000;
+  white-space: pre-line;
+  font-size: 1.2rem;
+}
+.applications .infor2 button {
+  margin: 15px;
+  border: 3px solid #89CFE6;
+  padding: 10px;
+  background: transparent;
+  position: relative;
+}
+.applications .infor2 button:before {
+  background: linear-gradient(to left, #8860D0, #59B9EA);
+  transform: scale(0);
+  direction: rtl;
+  transition: 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.applications .infor2 button a {
+  color: #063C70;
+  font-family: "Akrobat bold";
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.applications .infor2 button:hover {
+  color: #fff;
+  font-family: "Akrobat bold";
+  border: none;
+}
+.applications .infor2 button:hover:before {
+  transform: scale(1);
+}
+.applications .infor2 button:hover a {
+  color: #fff;
+  font-family: "Akrobat bold";
+}
+
+.Donations {
+  background: linear-gradient(to left, #8860D0, #5AB9EA);
+  padding: 5%;
+}
+.Donations h2 {
+  font-family: "Akrobat SemiBold";
+  color: #063C70;
+  padding: 10px 0;
+  font-size: 2rem;
+}
+.Donations p {
+  line-height: 1.2;
+  font-family: "Akrobat regular";
+  font-size: 1.5rem;
+  padding-bottom: 15px;
+  color: #fff;
+}
+.Donations .inner-infor1 {
+  padding-top: 20px;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-left: 10px;
+}
+.Donations .inner-infor1 p {
+  width: 100%;
+  padding-left: 10px;
+  white-space: pre-line;
+  font-family: "Akrobat bold";
+}
+.Donations .inner-infor1 a {
+  color: #fff;
+  font-family: "Akrobat ExtraBold";
+  font-size: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  margin: 10px 50px;
+}
+.Donations .inner-infor1 a::before {
+  content: "";
+  background-color: #fff;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: -60%;
+  top: 44%;
+}
+.Donations .inner-infor2 {
+  padding-top: 20px;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.Donations .inner-infor2 p {
+  width: 100%;
+  padding-left: 10px;
+  white-space: pre-line;
+  font-family: "Akrobat bold";
+}
+.Donations .inner-infor2 a {
+  color: #fff;
+  font-family: "Akrobat ExtraBold";
+  font-size: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  margin: 10px 50px;
+}
+.Donations .inner-infor2 a::before {
+  content: "";
+  background-color: #fff;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: -60%;
+  top: 44%;
+}
+.Donations .inner-infor3 {
+  padding-top: 20px;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.Donations .inner-infor3 p {
+  width: 100%;
+  padding-left: 10px;
+  white-space: pre-line;
+  font-family: "Akrobat bold";
+}
+.Donations .inner-infor3 a {
+  color: #fff;
+  font-family: "Akrobat ExtraBold";
+  font-size: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  margin: 10px 50px;
+}
+.Donations .inner-infor3 a::before {
+  content: "";
+  background-color: #fff;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: -60%;
+  top: 44%;
+}
+.Donations .text {
+  font-family: "Akrobat ExtraBold";
+  font-size: 1.8rem;
+  padding-top: 6px;
+  color: #fff;
+}
+
+.equipment {
+  padding: 5%;
+  text-align: center;
+}
+.equipment h3 {
+  padding: 5px;
+  font-family: "Akrobat SemiBold";
+  font-size: 3rem;
+}
+.equipment p {
+  line-height: 1.2;
+  font-family: "Akrobat regular";
+  font-size: 1.5rem;
+  padding: 1.5rem 5px;
+  color: #000000;
+}
+.equipment img {
+  margin-top: 20px;
+}
+.equipment button {
+  margin: 15px;
+  border: 3px solid #89CFE6;
+  padding: 10px;
+  background: transparent;
+  position: relative;
+  text-align: right;
+}
+.equipment button:before {
+  background: linear-gradient(to left, #8860D0, #59B9EA);
+  transform: scale(0);
+  direction: rtl;
+  transition: 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.equipment button a {
+  color: #063C70;
+  font-family: "Akrobat bold";
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.equipment button:hover {
+  color: #fff;
+  font-family: "Akrobat bold";
+  border: none;
+}
+.equipment button:hover:before {
+  transform: scale(1);
+}
+.equipment button:hover a {
+  color: #fff;
+  font-family: "Akrobat bold";
+}
+.equipment button a {
+  font-size: 1.5rem;
+}
+
+.gallery {
+  padding: 10% 5%;
+}
+.gallery .gallery-pic {
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border-radius: 5px;
+}
+.gallery .gallery-pic:nth-child(2) {
+  height: 250px;
+  background: #5AB9EA;
+  color: #063C70;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: unset;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.gallery .gallery-pic:first-child, .gallery .gallery-pic:nth-child(4), .gallery .gallery-pic:nth-child(5), .gallery .gallery-pic:nth-child(6) {
+  display: none;
+}
+.gallery .gallery-pic img {
+  width: 600px;
+}
+.gallery .gallery-pic h3 {
+  display: block;
+  margin: auto;
+  font-family: "Akrobat black";
+  font-size: 4.8rem;
+}
+
+.place-story {
+  margin-top: 5%;
+}
+.place-story .story-infor {
+  padding: 5%;
+}
+.place-story .story-infor h3 {
+  padding: 5px;
+  font-family: "Akrobat bold";
+  font-size: 1.8rem;
+}
+.place-story .story-infor p {
+  line-height: 1.2;
+  font-family: "Akrobat regular";
+  font-size: 1.5rem;
+  padding: 27px 5px;
+  color: #000000;
+}
+.place-story .story-infor button {
+  margin: 15px;
+  border: 3px solid #89CFE6;
+  padding: 10px;
+  background: transparent;
+  position: relative;
+  text-align: right;
+  margin-bottom: 30px;
+}
+.place-story .story-infor button:before {
+  background: linear-gradient(to left, #8860D0, #59B9EA);
+  transform: scale(0);
+  direction: rtl;
+  transition: 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.place-story .story-infor button a {
+  color: #063C70;
+  font-family: "Akrobat bold";
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.place-story .story-infor button:hover {
+  color: #fff;
+  font-family: "Akrobat bold";
+  border: none;
+}
+.place-story .story-infor button:hover:before {
+  transform: scale(1);
+}
+.place-story .story-infor button:hover a {
+  color: #fff;
+  font-family: "Akrobat bold";
+}
+.place-story .story-infor button a {
+  font-size: 1.5rem;
+}
+.place-story .story-infor img {
+  display: none;
+}
+.place-story .story {
+  box-shadow: 0px 2px 26px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  margin-bottom: 3rem;
+}
+.place-story .story .storyTell {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.place-story .story .storyTell p {
+  font-size: 1.5rem;
+  font-family: "Akrobat regular";
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.place-story .story .storyTell a {
+  font-family: "Akrobat regular";
+  font-size: 1.8rem;
+  color: #6D7278;
+}
+.place-story .story .story-name {
+  padding: 5px;
+  font-family: "Akrobat bold";
+  width: 15%;
+  font-size: 1.5rem;
+  background: #5AB9EA;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.place-story .story .story-name p {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  -webkit-text-orientation: sideways;
+          text-orientation: sideways;
+  transform: rotate(180deg);
+}
+.place-story .bg-color {
+  background: linear-gradient(to left, #8860D0, #5AB9EA);
+  color: white;
+  font-size: 1.5rem;
+  padding: 10% 5%;
+  font-family: "Akrobat bold";
+}
+.place-story .bg-color p {
+  font-size: 2.2rem;
+}
+.place-story .bg-color p span {
+  font-size: 1.6rem;
+}
+
+.Questions, .Questions-donate {
+  text-align: center;
+}
+.Questions h2, .Questions-donate h2 {
+  font-size: 1.5rem;
+  font-family: "Akrobat bold";
+  margin-bottom: 3rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
+  padding: 5% 0;
+  margin: auto;
+}
+.Questions .questions-inner h3, .Questions-donate .questions-inner h3 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: "Akrobat bold";
+}
+.Questions .questions-inner p, .Questions-donate .questions-inner p {
+  font-family: "Akrobat regular";
+  font-size: 2.5rem;
+  white-space: pre-line;
+}
+.Questions .questions-inner .infor, .Questions-donate .questions-inner .infor {
+  padding: 5px;
+  background: linear-gradient(to left, #8860D0, #5AB9EA);
+  height: 60px;
+  width: 100%;
+  margin: 3rem 0 5rem;
+}
+.Questions .questions-inner .contact, .Questions-donate .questions-inner .contact {
+  color: black;
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: relative;
+  padding: 5px;
+  margin: 0;
+  display: block;
+  font-family: "Akrobat bold";
+  font-size: 2rem;
+}
+.Questions .questions-inner .contact label, .Questions-donate .questions-inner .contact label {
+  margin-left: 5.4rem;
+  position: relative;
+  color: black;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.Questions .questions-inner .contact span, .Questions-donate .questions-inner .contact span {
+  -webkit-animation: widthGrow 700ms;
+          animation: widthGrow 700ms;
+  width: 4rem;
+  height: 2px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.Questions .questions-inner .contact:hover span, .Questions-donate .questions-inner .contact:hover span {
+  width: 4rem;
+}
+.Questions .contact-us h3, .Questions-donate .contact-us h3 {
+  font-size: 2rem;
+  font-family: "Akrobat regular";
+  margin-bottom: 2rem;
+  overflow-wrap: break-word;
+}
+.Questions .contact-us p, .Questions-donate .contact-us p {
+  font-size: 1.8rem;
+  font-family: "Akrobat bold";
+  margin-bottom: 2rem;
+}
+.Questions .contact-inner, .Questions-donate .contact-inner {
+  margin: 3rem 0;
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+  font-family: "Akrobat bold";
+}
+.Questions .contact-inner:before, .Questions-donate .contact-inner:before {
+  content: "";
+  height: 3px;
+  width: 10%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  background: #5AB9EA;
+}
+.Questions .contact-inner:after, .Questions-donate .contact-inner:after {
+  content: "";
+  height: 3px;
+  width: 10%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background: #5AB9EA;
+}
+.Questions .contact-links, .Questions-donate .contact-links {
+  margin-bottom: 3rem;
+  width: 100%;
+  text-align: center;
+}
+.Questions .contact-links li, .Questions-donate .contact-links li {
+  padding: 20px;
+  font-size: 1.5rem;
+  font-family: "Akrobat bold";
+}
+.Questions .contact-links li a, .Questions-donate .contact-links li a {
+  color: black;
+}
+
+footer {
+  text-align: center;
+  background: linear-gradient(to left, #8860D0, #5AB9EA);
+  color: #fff;
+  width: 100%;
+  height: auto;
+}
+footer p {
+  padding: 5%;
+  font-family: "Akrobat bold";
+  font-size: 2rem;
+}
+
+.Donate-form {
+  padding: 10% 5%;
+}
+.Donate-form p {
+  font-family: "Akrobat bold";
+  font-size: 1.8rem;
+  padding: 10px 0;
+}
+.Donate-form form input, .Donate-form form textarea {
+  font-family: "Akrobat bold";
+  font-size: 1.5rem;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #D8D8D8;
+  padding: 5px;
+  margin-bottom: 2rem;
+  outline: none;
+}
+.Donate-form form input::-moz-placeholder, .Donate-form form textarea::-moz-placeholder {
+  color: #979797;
+}
+.Donate-form form input:-ms-input-placeholder, .Donate-form form textarea:-ms-input-placeholder {
+  color: #979797;
+}
+.Donate-form form input::placeholder, .Donate-form form textarea::placeholder {
+  color: #979797;
+}
+.Donate-form button {
+  margin: 15px;
+  border: 3px solid #89CFE6;
+  padding: 10px;
+  background: transparent;
+  position: relative;
+}
+.Donate-form button:before {
+  background: linear-gradient(to left, #8860D0, #59B9EA);
+  transform: scale(0);
+  direction: rtl;
+  transition: 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.Donate-form button a {
+  color: #063C70;
+  font-family: "Akrobat bold";
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.Donate-form button:hover {
+  color: #fff;
+  font-family: "Akrobat bold";
+  border: none;
+}
+.Donate-form button:hover:before {
+  transform: scale(1);
+}
+.Donate-form button:hover a {
+  color: #fff;
+  font-family: "Akrobat bold";
+}
+.Donate-form button a {
+  font-size: 1.5rem;
+}
+.Donate-form img {
+  padding-top: 32px;
+}
+
+.Sponsor-form p {
+  font-family: "Akrobat bold";
+  font-size: 1.5rem;
+  padding: 5%;
+  color: white;
+  line-height: 1.5rem;
+}
+.Sponsor-form input[type=text], .Sponsor-form input[type=email] {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-family: "Akrobat bold";
+  outline: none;
+  padding: 5px;
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #D8D8D8;
+  color: white;
+}
+.Sponsor-form input[type=text]::-moz-placeholder, .Sponsor-form input[type=email]::-moz-placeholder {
+  color: white;
+}
+.Sponsor-form input[type=text]:-ms-input-placeholder, .Sponsor-form input[type=email]:-ms-input-placeholder {
+  color: white;
+}
+.Sponsor-form input[type=text]::placeholder, .Sponsor-form input[type=email]::placeholder {
+  color: white;
+}
+.Sponsor-form .sponsor-inner {
+  background: linear-gradient(to left, #8860D0, #5AB9EA);
+  padding: 5%;
+}
+.Sponsor-form form {
+  padding: 20px 0;
+}
+.Sponsor-form form input[type=checkbox] + label {
+  cursor: pointer;
+  color: #fff;
+  margin: 0.2em;
+  font-family: "Akrobat bold";
+  margin-right: 0.5rem;
+}
+.Sponsor-form form input[type=checkbox] {
+  display: none;
+  margin-bottom: 0.5em;
+}
+.Sponsor-form form input[type=checkbox] + label:before {
+  content: "✔";
+  border: 3px solid #fff;
+  width: 25px;
+  height: 25px;
+  padding-right: 0.2em;
+  margin-right: 0.5rem;
+  color: transparent;
+  transition: 0.2s;
+}
+.Sponsor-form form input[type=checkbox]:checked + label:before {
+  border-color: #1E4F7E;
+  color: #000000;
+}
+.Sponsor-form form input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+.Sponsor-form form input[type=checkbox] :checked:disabled + label:before {
+  transform: scale(1);
+  border-color: #1E4F7E;
+  color: #1E4F7E;
+}
+.Sponsor-form form .form-inner {
+  display: flex;
+  padding-top: 10px;
+}
+.Sponsor-form form .form-inner button {
+  background-color: transparent;
+  border: 3px solid #fff;
+  padding: 20px;
+}
+.Sponsor-form form .form-inner button a {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Akrobat bold";
+  text-decoration: none;
+}
+.Sponsor-form form .form-inner button a img {
+  width: 20px;
+}
+.Sponsor-form form p {
+  font-size: 1.5rem;
+  font-family: "Akrobat bold";
+  color: white;
+  margin: auto 0;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.Sponsor-form form .amount {
+  border: 2px solid white;
+  width: 44%;
+  margin: 2rem 0 1rem auto;
+  font-size: 1.2rem;
+  background-color: transparent;
+  padding: 10px;
+}
+.Sponsor-form form .amount::-moz-placeholder {
+  color: white;
+  font-family: "Akrobat regular";
+}
+.Sponsor-form form .amount:-ms-input-placeholder {
+  color: white;
+  font-family: "Akrobat regular";
+}
+.Sponsor-form form .amount::placeholder {
+  color: white;
+  font-family: "Akrobat regular";
+}
+.Sponsor-form .sponsor button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.Sponsor-form .sponsor button a {
+  font-size: 0.8rem;
+  color: white;
+  font-family: "Akrobat regular";
+}
+.Sponsor-form .sponsor button a img {
+  width: 20px;
+  margin: 0 10px;
+}
+.Sponsor-form .sponsor button a::before {
+  display: none;
+}
+.Sponsor-form .sponsor a {
+  color: #fff;
+  font-family: "Akrobat regular";
+  font-size: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  margin: 15px;
+}
+.Sponsor-form .sponsor a::before {
+  content: "";
+  background-color: #fff;
+  width: 37%;
+  height: 2px;
+  position: absolute;
+  left: -42%;
+  top: 58%;
+}
+
+.song {
+  padding: 10% 5%;
+  text-align: left;
+}
+.song p {
+  font-family: "Akrobat bold";
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  padding: 10px;
+}
+.song a {
+  font-family: "Akrobat regular";
+  font-size: 0.8rem;
+  text-decoration: none;
+  margin: 10px;
+  color: #34879D;
+  white-space: pre-line;
+}
+
+.bg-color {
+  text-align: center;
+  background: linear-gradient(to left, #8860D0, #5AB9EA);
+  color: #fff;
+  width: 100%;
+  height: auto;
+}
+.bg-color p {
+  white-space: pre-line;
+  font-family: "Akrobat bold";
+  font-size: 1rem;
+  text-align: left;
+  padding: 5%;
+}
+
+.slider {
+  padding: 5%;
+}
+.slider .items {
+  text-align: center;
+}
+.slider .items p {
+  font-family: "Akrobat regular";
+  font-size: 1.5rem;
+  line-height: 1.1;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+.slider .items a {
+  display: block;
+  padding: 10px;
+  color: #000000;
+  font-family: "Akrobat regular";
+  font-size: 1.3rem;
+}
+.slider .items .span {
+  margin: 15px;
+  border: 3px solid #89CFE6;
+  padding: 10px;
+  background: transparent;
+  position: relative;
+  background: linear-gradient(to left, #8860D0, #5AB9EA);
+  border: none;
+  color: white;
+  font-family: "Akrobat black";
+}
+.slider .items .span:before {
+  background: linear-gradient(to left, #8860D0, #59B9EA);
+  transform: scale(0);
+  direction: rtl;
+  transition: 0.7s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.slider .items .span a {
+  color: #063C70;
+  font-family: "Akrobat bold";
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.slider .items .span:hover {
+  color: #fff;
+  font-family: "Akrobat bold";
+  border: none;
+}
+.slider .items .span:hover:before {
+  transform: scale(1);
+}
+.slider .items .span:hover a {
+  color: #fff;
+  font-family: "Akrobat bold";
+}
+.slider .slick-current {
+  display: none;
+}
+.slider .slick-arrow {
+  display: none;
+}
+
+.Questions h2, .Questions-donate h2 {
+  font-size: 2rem;
+  padding: 10% 0% 5%;
+}
+.Questions .questions-inner h3, .Questions-donate .questions-inner h3 {
+  font-size: 1.8rem;
+}
+.Questions .questions-inner p, .Questions-donate .questions-inner p {
+  font-size: 2rem;
+}
+.Questions .contact-us h3, .Questions-donate .contact-us h3 {
+  font-size: 1.8rem;
+}
+.Questions .contact-us p, .Questions-donate .contact-us p {
+  font-size: 1.5rem;
+}
+
+footer p {
+  font-size: 1.5rem;
+}
+
+.Donate-form {
+  text-align: center;
+}
+.Donate-form p {
+  font-size: 2rem;
+}
+.Donate-form .contact-us {
+  padding: 5%;
+}
+.Donate-form .contact-us h3 {
+  font-size: 1.5rem;
+  font-family: "Akrobat bold";
+  margin-bottom: 1.5rem;
+}
+.Donate-form .contact-us p {
+  font-size: 1.2rem;
+  font-family: "Akrobat regular";
+  margin-bottom: 1.5rem;
+}
+.Donate-form .form-inner .infor {
+  padding: 5px;
+  background: linear-gradient(to left, #8860D0, #5AB9EA);
+  height: 60px;
+  width: 100%;
+  margin: 3rem 0 5rem;
+}
+.Donate-form .form-inner .contact {
+  color: black;
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: relative;
+  padding: 5px;
+  margin: 0;
+  display: block;
+  font-family: "Akrobat bold";
+  font-size: 2rem;
+}
+.Donate-form .form-inner .contact label {
+  margin-left: 5.4rem;
+  position: relative;
+  color: black;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.Donate-form .form-inner .contact span {
+  -webkit-animation: widthGrow 700ms;
+          animation: widthGrow 700ms;
+  width: 4rem;
+  height: 2px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.Donate-form .form-inner .contact:hover span {
+  width: 4rem;
+}
+
+@media (min-width: 568px) {
+  .banner .banner-header .banner-text form .form-inner {
+    padding-left: 48%;
+  }
+
+  .place-story .story-infor {
+    text-align: center;
+  }
+  .place-story .story-infor p {
+    white-space: pre-line;
+  }
+  .place-story .inner-story .story {
+    width: 100%;
+    margin: 1rem auto;
+  }
+  .place-story .inner-story .story .story-name {
+    padding: 3%;
+    max-width: 50px;
+  }
+
+  .equipment p {
+    white-space: pre-line;
+  }
+  .equipment img {
+    width: 50%;
+  }
+
+  .Donations P {
+    white-space: pre-line;
+  }
+
+  .Sponsor-form form p {
+    margin-bottom: 31px;
+  }
+  .Sponsor-form .sponsor {
+    display: flex;
+    justify-content: space-between;
+  }
+  .Sponsor-form .sponsor button {
+    width: 60%;
+  }
+  .Sponsor-form .sponsor a::before {
+    width: 46%;
+    left: -56%;
+    top: 40%;
+  }
+}
+@media (min-width: 768px) {
+  .banner {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+  .banner img {
+    width: 50%;
+  }
+  .banner .banner-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .banner .banner-header .banner-text {
+    padding: 10% 5%;
+  }
+  .banner .banner-header .banner-text h2 {
+    font-size: 2.5rem;
+  }
+  .banner .banner-header .banner-text p {
+    padding: 10px 0;
+    font-size: 1.5rem;
+    white-space: pre-line;
+  }
+  .banner .banner-header .banner-text form .form-inner {
+    padding-left: 11px;
+  }
+  .banner .banner-header .banner-text form input[type=checkbox] + label {
+    margin: 10px 2px;
+  }
+
+  .join {
+    display: flex;
+    padding: 5%;
+    justify-content: space-between;
+  }
+  .join h2 {
+    padding: 20px 0;
+    font-size: 20px;
+    font-family: "Akrobat bold";
+    color: #fff;
+    white-space: pre-line;
+    width: 50%;
+    line-height: 1.3;
+  }
+  .join form {
+    padding: 20px 0;
+    width: 50%;
+    padding: 5% 0;
+  }
+  .join form input[type=checkbox] + label {
+    cursor: pointer;
+    color: #fff;
+    margin: 0.2em;
+    font-family: "Akrobat bold";
+    margin-right: 0.5rem;
+  }
+  .join form input[type=checkbox] {
+    display: none;
+    margin-bottom: 0.5em;
+  }
+  .join form input[type=checkbox] + label:before {
+    content: "✔";
+    border: 3px solid #fff;
+    width: 25px;
+    height: 25px;
+    padding-right: 0.2em;
+    margin-right: 0.5rem;
+    color: transparent;
+    transition: 0.2s;
+  }
+  .join form input[type=checkbox]:checked + label:before {
+    border-color: #1E4F7E;
+    color: #000000;
+  }
+  .join form input[type=checkbox] + label:active:before {
+    transform: scale(0);
+  }
+  .join form input[type=checkbox] :checked:disabled + label:before {
+    transform: scale(1);
+    border-color: #1E4F7E;
+    color: #1E4F7E;
+  }
+  .join form .form-inner {
+    display: flex;
+    padding-top: 10px;
+  }
+  .join form .form-inner button {
+    background-color: transparent;
+    border: 3px solid #fff;
+    padding: 20px;
+  }
+  .join form .form-inner button a {
+    font-size: 1.5rem;
+    color: white;
+    font-family: "Akrobat bold";
+    text-decoration: none;
+  }
+  .join form .form-inner button a img {
+    width: 20px;
+  }
+  .join form .form-inner {
+    padding-top: 18px;
+  }
+  .join form .form-inner button {
+    padding: 15px;
+  }
+
+  .stories h2 {
+    font-size: 3rem;
+  }
+  .stories p {
+    font-size: 1.5rem;
+  }
+
+  .applications .infor2 {
+    position: relative;
+  }
+  .applications .infor2:before {
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #979797;
+    content: "";
+  }
+  .applications h2 {
+    font-size: 1.8rem;
+  }
+  .applications h3 {
+    font-size: 1.5rem;
+  }
+  .applications p {
+    font-size: 1.5rem;
+  }
+
+  .Donations .inner-infor1 {
+    margin-top: 34%;
+  }
+  .Donations .inner-infor2 {
+    margin-top: 26%;
+  }
+  .Donations .inner-infor3 {
+    margin-top: 10px;
+  }
+  .Donations .inner-infor3 a {
+    margin: 10px 58px;
+  }
+  .Donations p {
+    padding-bottom: 30px;
+    font-size: 1.2rem;
+  }
+
+  .equipment {
+    display: flex;
+    padding: 2% 5%;
+    justify-content: space-between;
+  }
+  .equipment .text {
+    padding-top: 14%;
+    text-align: left;
+  }
+  .equipment .text h3 {
+    font-size: 2.5rem;
+  }
+  .equipment .text p {
+    white-space: pre-line;
+    font-size: 1.4rem;
+  }
+  .equipment .text button {
+    margin: 10px 0;
+  }
+  .equipment img {
+    width: 50%;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .gallery .gallery-pic {
+    margin-bottom: 1rem;
+    height: 156px;
+  }
+  .gallery .gallery-pic:nth-child(2) {
+    padding: 6%;
+    height: -webkit-fill-available;
+    width: 19%;
+  }
+  .gallery .gallery-pic:first-child, .gallery .gallery-pic:nth-child(4), .gallery .gallery-pic:nth-child(5), .gallery .gallery-pic:nth-child(6) {
+    display: block;
+  }
+  .gallery .gallery-pic:first-child {
+    width: 49%;
+  }
+  .gallery .gallery-pic:nth-child(3), .gallery .gallery-pic:nth-child(4) {
+    width: 29%;
+  }
+  .gallery .gallery-pic:nth-child(5), .gallery .gallery-pic:nth-child(7) {
+    width: 18%;
+  }
+  .gallery .gallery-pic:nth-child(6) {
+    width: 29.5%;
+  }
+  .gallery .gallery-pic img {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fill-available;
+  }
+  .gallery .gallery-pic h3 {
+    font-size: 3rem;
+  }
+
+  .place-story {
+    display: flex;
+    position: relative;
+  }
+  .place-story .story-infor {
+    padding: 5%;
+    text-align: left;
+  }
+  .place-story .story-infor h3 {
+    font-size: 3rem;
+    white-space: pre-line;
+  }
+  .place-story .story-infor p {
+    font-size: 1.5rem;
+  }
+  .place-story .story-infor button {
+    padding: 20px;
+  }
+  .place-story .story-infor button a {
+    font-size: 25px;
+  }
+  .place-story .story-infor .story {
+    background: white;
+  }
+  .place-story .story .storyTell {
+    background: white;
+  }
+  .place-story img {
+    display: block;
+  }
+  .place-story .bg-color {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    top: 81%;
+    height: 22vh;
+  }
+  .place-story .bg-color p {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+  .place-story .dots {
+    display: block;
+    border-radius: 4px;
+    width: 0.8rem;
+    height: 10rem;
+    background: #5AB9EA;
+    right: 0;
+    top: 7rem;
+    position: absolute;
+  }
+  .place-story .dots:before {
+    content: "";
+    background: #5AB9EA;
+    height: 5rem;
+    width: 0.8rem;
+    position: absolute;
+    right: 0;
+    top: 130px;
+    border-radius: 4px;
+  }
+  .place-story .dots:after {
+    content: "";
+    background: #5AB9EA;
+    height: 2.5rem;
+    width: 0.8rem;
+    position: absolute;
+    right: 0;
+    top: 218px;
+    border-radius: 4px;
+  }
+
+  .Questions, .Questions-donate {
+    padding-top: 23%;
+  }
+  .Questions h2, .Questions-donate h2 {
+    font-size: 2.5rem;
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+  .Questions .questions-inner, .Questions-donate .questions-inner {
+    text-align: center;
+  }
+  .Questions .questions-inner p, .Questions-donate .questions-inner p {
+    font-size: 1.8rem;
+  }
+  .Questions .questions-inner h3, .Questions-donate .questions-inner h3 {
+    margin: 5% 0;
+  }
+  .Questions .questions-inner .infor, .Questions-donate .questions-inner .infor {
+    width: 60%;
+    margin: 2rem auto;
+    height: 70px;
+  }
+  .Questions .questions-inner .contact label, .Questions-donate .questions-inner .contact label {
+    font-size: 1.5rem;
+  }
+  .Questions .contact-us, .Questions-donate .contact-us {
+    text-align: left;
+  }
+  .Questions .contact-us h3, .Questions-donate .contact-us h3 {
+    font-size: 1.5rem;
+  }
+  .Questions .contact-inner:before, .Questions-donate .contact-inner:before, .Questions .contact-inner:after, .Questions-donate .contact-inner:after {
+    width: 30%;
+    transform: tranalateY(-50%);
+  }
+  .Questions .contact-links, .Questions-donate .contact-links {
+    margin: 4rem 0 7rem;
+    display: flex;
+    justify-content: center;
+  }
+  .Questions .contact-links li a, .Questions-donate .contact-links li a {
+    font-size: 1.5rem;
+  }
+
+  .Sponsor-form {
+    display: flex;
+  }
+  .Sponsor-form p {
+    font-size: 1.5rem;
+    padding: 0;
+    line-height: 1.2;
+  }
+  .Sponsor-form .sponsor-img {
+    width: 50%;
+  }
+  .Sponsor-form .sponsor-inner {
+    width: 66%;
+    padding: 2%;
+  }
+  .Sponsor-form .sponsor-inner form {
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+  .Sponsor-form .sponsor-inner form p {
+    margin: 10px 0;
+    font-size: 1.5rem;
+  }
+  .Sponsor-form .sponsor-inner form:last-child {
+    margin-bottom: 0;
+  }
+  .Sponsor-form .sponsor-inner form input[type=checkbox] + label:before {
+    height: 25px;
+    width: 25px;
+  }
+  .Sponsor-form .sponsor-inner form label {
+    font-size: 1.5rem;
+  }
+  .Sponsor-form .sponsor-inner form .label {
+    width: 63%;
+    height: auto;
+    padding: 5px;
+    font-size: 1.5rem;
+  }
+  .Sponsor-form .sponsor-inner form input[type=checkbox] + label {
+    margin: 10px;
+  }
+  .Sponsor-form form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Sponsor-form form .amount {
+    border: 1px solid white;
+    margin: 1rem 0 1rem auto;
+    background: transparent;
+    padding: 5px;
+    font-size: 1.4rem;
+    width: 10rem;
+  }
+  .Sponsor-form form .amount::-moz-placeholder {
+    color: #ebebeb;
+  }
+  .Sponsor-form form .amount:-ms-input-placeholder {
+    color: #ebebeb;
+  }
+  .Sponsor-form form .amount::placeholder {
+    color: #ebebeb;
+  }
+  .Sponsor-form form input[type=text] {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    width: 45%;
+  }
+  .Sponsor-form form .label {
+    font-size: 1.5rem;
+  }
+  .Sponsor-form form input[type=email] {
+    margin-bottom: -25px;
+    font-size: 1.5rem;
+  }
+  .Sponsor-form form .amount {
+    border: 3px solid white;
+    margin: 0rem 0 1rem auto;
+    padding: 10px;
+    width: 10rem;
+    height: 32px;
+  }
+  .Sponsor-form .sponsor button {
+    border: 3px solid #fff;
+    padding: 10px;
+    width: 75%;
+    margin-bottom: 20px;
+  }
+  .Sponsor-form .sponsor span {
+    font-size: 2rem;
+    font-family: "Akrobat ExtraBold";
+  }
+
+  .Donate-form {
+    text-align: center;
+  }
+  .Donate-form .form-inner {
+    text-align: left;
+  }
+  .Donate-form .form-inner form input[type=text] {
+    width: 45%;
+  }
+  .Donate-form .contact-us {
+    text-align: left;
+  }
+  .Donate-form .form-inner .infor {
+    padding: 5px;
+    background: linear-gradient(to left, #8860D0, #5AB9EA);
+    height: 60px;
+    width: 78%;
+    margin: 3rem 15rem 5rem;
+  }
+  .Donate-form .Donate-form {
+    padding: 5%;
+  }
+  .Donate-form .Donate-form p {
+    font-size: 2rem;
+    white-space: pre-line;
+    line-height: 1.2;
+  }
+  .Donate-form .Donate-form .form-inner form {
+    margin-top: 40px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Donate-form button {
+    padding: 20px;
+    display: flex;
+    margin: 0 0 0 auto;
+  }
+
+  .slider {
+    padding: 5%;
+    display: flex;
+  }
+  .slider .slick-slide {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    top: 200px;
+  }
+  .slider .slick-slide p {
+    display: none;
+  }
+  .slider .slick-slide .inner {
+    display: block;
+  }
+  .slider .slick-slide .items {
+    position: relative;
+    top: -122px;
+  }
+  .slider .slick-slide .items .span {
+    background: transparent;
+    color: black;
+  }
+  .slider .slick-current {
+    top: 0;
+  }
+  .slider .slick-current p {
+    display: block;
+  }
+  .slider .slick-current .items {
+    top: 0;
+  }
+  .slider .slick-current .items .span {
+    margin: 15px;
+    border: 3px solid #89CFE6;
+    padding: 10px;
+    background: transparent;
+    position: relative;
+    background: linear-gradient(to left, #8860D0, #5AB9EA);
+    border: none;
+    color: white;
+    font-family: "Akrobat black";
+  }
+  .slider .slick-current .items .span:before {
+    background: linear-gradient(to left, #8860D0, #59B9EA);
+    transform: scale(0);
+    direction: rtl;
+    transition: 0.7s;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+  }
+  .slider .slick-current .items .span a {
+    color: #063C70;
+    font-family: "Akrobat bold";
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  .slider .slick-current .items .span:hover {
+    color: #fff;
+    font-family: "Akrobat bold";
+    border: none;
+  }
+  .slider .slick-current .items .span:hover:before {
+    transform: scale(1);
+  }
+  .slider .slick-current .items .span:hover a {
+    color: #fff;
+    font-family: "Akrobat bold";
+  }
+  .slider .slick-current .items {
+    text-align: center;
+  }
+  .slider .slick-current .items p {
+    font-family: "Akrobat regular";
+    font-size: 1.5rem;
+    line-height: 1.1;
+    padding: 10px;
+    padding-bottom: 20px;
+    white-space: pre-line;
+  }
+  .slider .slick-current .items .text {
+    border-top: 5px solid #5AB9EA;
+  }
+  .slider .slick-current .items a {
+    display: block;
+    padding: 10px;
+    color: #000000;
+    font-family: "Akrobat regular";
+    font-size: 1.3rem;
+  }
+  .slider .slick-current .items .inner {
+    display: none;
+  }
+  .slider .slick-arrow {
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+    background-color: #063C70;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    width: 100px;
+    outline: none;
+    font-family: "Akrobat regular";
+    font-size: 1.3rem;
+  }
+  .slider .slick-next {
+    left: 53%;
+  }
+  .slider .slick-prev {
+    left: 35%;
+  }
+
+  .Questions-donate {
+    padding-top: 2%;
+  }
+}
+@media (min-width: 992px) {
+  .banner .banner-header .banner-text p {
+    font-size: 2rem;
+  }
+  .banner .banner-header .banner-text form input[type=checkbox] + label {
+    font-size: 1.5rem;
+  }
+  .banner .banner-header .banner-text form .form-inner button {
+    width: 58%;
+  }
+
+  .stories p {
+    font-size: 1.8rem;
+  }
+
+  .join h2 {
+    font-size: 2rem;
+    padding-top: 45px;
+  }
+  .join form input[type=checkbox] + label {
+    font-size: 1.8rem;
+  }
+
+  .place-story {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .place-story h3 {
+    font-size: 3.5rem;
+    white-space: pre-line;
+  }
+  .place-story p {
+    font-size: 2rem;
+  }
+  .place-story .story-infor {
+    padding: 5%;
+  }
+  .place-story .story-infor p {
+    padding-top: 20px;
+  }
+  .place-story .story-infor .story {
+    background: white;
+  }
+  .place-story .bg-color {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+  }
+  .place-story .bg-color p {
+    width: 50%;
+    padding-top: 9px;
+  }
+  .place-story .inner-story {
+    padding: 5%;
+  }
+
+  .side-tabs label {
+    font-size: 1.8rem;
+  }
+
+  .Tabs .tabs-infor .active h3 {
+    font-size: 1.8rem;
+  }
+  .Tabs .tabs-infor .active p {
+    white-space: pre-line;
+    font-size: 1.5rem;
+  }
+  .Tabs .tabs-infor li {
+    font-size: 1.5rem;
+  }
+
+  .Questions h2, .Questions-donate h2 {
+    font-size: 3rem;
+  }
+  .Questions .questions-inner h3, .Questions-donate .questions-inner h3 {
+    font-size: 1.8rem;
+  }
+  .Questions .questions-inner p, .Questions-donate .questions-inner p {
+    font-size: 1.5rem;
+  }
+  .Questions .questions-inner .infor, .Questions-donate .questions-inner .infor {
+    width: 25rem;
+    font-size: 2.2rem;
+  }
+  .Questions .contact-us, .Questions-donate .contact-us {
+    padding: 5% 20%;
+  }
+  .Questions .contact-us h3, .Questions-donate .contact-us h3 {
+    font-size: 3.5rem;
+  }
+  .Questions .contact-us p, .Questions-donate .contact-us p {
+    font-size: 2.5rem;
+  }
+  .Questions .contact-inner, .Questions-donate .contact-inner {
+    font-size: 3.2rem;
+  }
+  .Questions .contact-inner:before, .Questions-donate .contact-inner:before, .Questions .contact-inner:after, .Questions-donate .contact-inner:after {
+    width: 30%;
+  }
+  .Questions .contact-links, .Questions-donate .contact-links {
+    display: flex;
+    justify-content: center;
+  }
+  .Questions .contact-links li, .Questions-donate .contact-links li {
+    font-size: 2rem;
+  }
+
+  footer p {
+    padding: 7%;
+  }
+
+  .Donate-form {
+    text-align: center;
+  }
+  .Donate-form .form-inner {
+    text-align: left;
+  }
+  .Donate-form .form-inner form input[type=text] {
+    width: 45%;
+  }
+  .Donate-form .contact-us {
+    text-align: left;
+  }
+  .Donate-form .form-inner .infor {
+    padding: 5px;
+    background: linear-gradient(to left, #8860D0, #5AB9EA);
+    height: 60px;
+    width: 54%;
+    margin: 3rem 22rem 5rem;
+  }
+
+  .Donations .inner-infor3 {
+    margin-top: 47px;
+  }
+
+  .Sponsor-form {
+    display: flex;
+  }
+  .Sponsor-form p {
+    font-size: 1.8rem;
+    padding: 0;
+    line-height: 1.1;
+  }
+  .Sponsor-form .sponsor-img {
+    width: 50%;
+  }
+  .Sponsor-form .sponsor-inner {
+    width: 50%;
+    padding: 2%;
+  }
+  .Sponsor-form .sponsor-inner form {
+    justify-content: space-between;
+  }
+  .Sponsor-form .sponsor-inner form p {
+    margin-bottom: 39px;
+    font-size: 1.5rem;
+  }
+  .Sponsor-form .sponsor-inner form:last-child {
+    margin-bottom: 0;
+  }
+  .Sponsor-form .sponsor-inner form input[type=checkbox] + label:before {
+    height: 25px;
+    width: 25px;
+  }
+  .Sponsor-form .sponsor-inner form label {
+    font-size: 1.5rem;
+  }
+  .Sponsor-form .sponsor-inner form .label {
+    width: 63%;
+    height: auto;
+    padding: 5px;
+    font-size: 1.2rem;
+  }
+  .Sponsor-form form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Sponsor-form form .amount {
+    border: 1px solid white;
+    margin: -1rem 0 1rem auto;
+    background: transparent;
+    padding: 5px;
+    font-size: 1.4rem;
+    width: 10rem;
+  }
+  .Sponsor-form form .amount::-moz-placeholder {
+    color: #ebebeb;
+  }
+  .Sponsor-form form .amount:-ms-input-placeholder {
+    color: #ebebeb;
+  }
+  .Sponsor-form form .amount::placeholder {
+    color: #ebebeb;
+  }
+  .Sponsor-form form input[type=text] {
+    width: 45%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .Sponsor-form form .label {
+    font-size: 1rem;
+  }
+  .Sponsor-form form input[type=email] {
+    margin-bottom: -25px;
+    font-size: 1rem;
+  }
+
+  .slider .slick-next {
+    left: 53%;
+  }
+  .slider .slick-prev {
+    left: 43%;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .gallery .gallery-pic {
+    margin-bottom: 1rem;
+    height: 156px;
+  }
+  .gallery .gallery-pic:nth-child(2) {
+    padding: 4%;
+    height: -webkit-fill-available;
+    width: 19%;
+  }
+  .gallery .gallery-pic:first-child, .gallery .gallery-pic:nth-child(4), .gallery .gallery-pic:nth-child(5), .gallery .gallery-pic:nth-child(6) {
+    display: block;
+  }
+  .gallery .gallery-pic:first-child {
+    width: 49%;
+  }
+  .gallery .gallery-pic:nth-child(3), .gallery .gallery-pic:nth-child(4) {
+    width: 29%;
+  }
+  .gallery .gallery-pic:nth-child(5), .gallery .gallery-pic:nth-child(7) {
+    width: 18%;
+  }
+  .gallery .gallery-pic:nth-child(6) {
+    width: 29.5%;
+  }
+  .gallery .gallery-pic img {
+    width: unset;
+    height: initial;
+  }
+  .gallery .gallery-pic h3 {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .Tabs {
+    display: flex;
+    justify-content: space-between;
+  }
+  .Tabs .tabs-inner {
+    width: 35%;
+    margin-bottom: 0;
+  }
+  .Tabs .tabs-inner .tab-scroll {
+    height: 60%;
+    top: 13%;
+  }
+  .Tabs .tabs-inner .side-tabs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .Tabs .tabs-inner .side-tabs label {
+    font-size: 2.5rem;
+  }
+  .Tabs .tabs-infor {
+    width: 62%;
+  }
+  .Tabs .tabs-infor .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Tabs .tabs-infor .list h3 {
+    width: 100%;
+  }
+  .Tabs .tabs-infor .list p {
+    width: 100%;
+  }
+  .Tabs .tabs-infor .list ol {
+    width: 50%;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+  .banner img {
+    width: 69%;
+  }
+  .banner .banner-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2%;
+  }
+  .banner .banner-header .banner-text {
+    padding: 28% 5%;
+  }
+  .banner .banner-header .banner-text h2 {
+    font-size: 45px;
+    padding: 20px 0;
+  }
+  .banner .banner-header .banner-text p {
+    white-space: pre-line;
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 50px 0;
+  }
+  .banner .banner-header .banner-text form input[type=checkbox] + label {
+    margin: 10px;
+  }
+  .banner .banner-header .banner-text form .form-inner button {
+    width: 50%;
+  }
+
+  .stories {
+    padding: 10%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .stories h2 {
+    font-size: 3rem;
+    padding-bottom: 5%;
+  }
+  .stories p {
+    line-height: 1.6;
+    font-size: 2rem;
+  }
+
+  .join {
+    padding: 5%;
+  }
+  .join h2 {
+    font-size: 30px;
+    line-height: 1.5;
+  }
+  .join form .form-inner {
+    padding-top: 29px;
+  }
+
+  .applications {
+    padding: 6%;
+  }
+  .applications h2 {
+    line-height: 1.5;
+    padding-bottom: 64px;
+    white-space: pre-line;
+    font-size: 20px;
+  }
+  .applications h3 {
+    font-size: 30px;
+  }
+  .applications .infor {
+    text-align: left;
+  }
+  .applications .infor p {
+    padding: 0 10px;
+    white-space: pre-line;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+  .applications .infor button {
+    margin: 15px 10px;
+    padding: 20px 88px;
+  }
+  .applications .infor button a {
+    font-size: 20px;
+  }
+  .applications .infor2 {
+    text-align: left;
+  }
+  .applications .infor2 p {
+    padding: 0 10px;
+    white-space: pre-line;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+  .applications .infor2 button {
+    margin: 10px;
+    padding: 20px 88px;
+  }
+  .applications .infor2 button a {
+    font-size: 20px;
+  }
+
+  .Donations {
+    padding-top: 9%;
+  }
+  .Donations h2 {
+    font-size: 43px;
+    padding: 34px 0;
+  }
+  .Donations p {
+    white-space: pre-line;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+  .Donations .inner-infor1 {
+    margin: 129px 20px;
+  }
+  .Donations .inner-infor2 {
+    margin: 72px 20px;
+  }
+  .Donations .inner-infor3 p {
+    margin-right: 10px;
+  }
+  .Donations .text {
+    font-size: 34px;
+    padding: 0;
+  }
+
+  .equipment {
+    padding: 5%;
+  }
+  .equipment .text h3 {
+    font-size: 3rem;
+    padding-bottom: 20px;
+  }
+  .equipment .text p {
+    line-height: 1.5;
+    font-size: 2rem;
+  }
+  .equipment .text img {
+    margin-top: 30px;
+  }
+  .equipment .text button {
+    padding: 20px 69px;
+    margin: 20px 5px;
+  }
+  .equipment .text button a {
+    font-size: 25px;
+  }
+
+  .place-story {
+    height: 100vh;
+  }
+  .place-story .story-infor h3 {
+    font-size: 3.3rem;
+    font-family: "Akrobat SemiBold";
+  }
+  .place-story .story-infor p {
+    font-size: 2rem;
+  }
+  .place-story .story-infor button {
+    margin-top: 20px;
+  }
+  .place-story .bg-color {
+    height: 50vh;
+    top: 72%;
+  }
+  .place-story .bg-color p {
+    font-size: 2.5rem;
+    padding-top: 1px;
+  }
+
+  .Questions, .Questions-donate {
+    padding-top: 8%;
+  }
+  .Questions .questions-inner h3, .Questions-donate .questions-inner h3 {
+    font-size: 3rem;
+  }
+  .Questions .questions-inner p, .Questions-donate .questions-inner p {
+    font-size: 2.3rem;
+  }
+  .Questions .contact-us h3, .Questions-donate .contact-us h3 {
+    font-size: 2.6rem;
+    font-family: "Akrobat bold";
+  }
+  .Questions .contact-us p, .Questions-donate .contact-us p {
+    font-size: 2.3rem;
+    font-family: "Akrobat regular";
+  }
+
+  .Questions-donate {
+    padding-top: 10px;
+  }
+
+  .gallery .gallery-pic:nth-child(2) {
+    width: 19.5%;
+    padding: 3%;
+    text-align: center;
+  }
+  .gallery .gallery-pic:nth-child(3), .gallery .gallery-pic:nth-child(4) {
+    width: 28.5%;
+  }
+  .gallery .gallery-pic:nth-child(5), .gallery .gallery-pic:nth-child(7) {
+    width: 18.5%;
+  }
+  .gallery .gallery-pic:nth-child(6) {
+    width: 29.5%;
+  }
+  .gallery .gallery-pic img {
+    width: unset;
+    height: initial;
+  }
+  .gallery .gallery-pic h3 {
+    font-size: 4rem;
+  }
+
+  .Donate-form {
+    padding: 5%;
+  }
+  .Donate-form p {
+    font-size: 2rem;
+    white-space: pre-line;
+    line-height: 1.2;
+  }
+  .Donate-form .form-inner form {
+    margin-top: 40px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Donate-form button {
+    padding: 20px;
+    display: flex;
+    margin: 0 0 0 auto;
+  }
+  .Donate-form .contact-us h3 {
+    font-size: 2rem;
+  }
+  .Donate-form .contact-us p {
+    font-size: 1.8rem;
+  }
+
+  .Sponsor-form .sponsor-inner {
+    padding: 4%;
+    width: 66%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .Sponsor-form .sponsor-inner form {
+    padding-top: 30px;
+  }
+  .Sponsor-form .sponsor-inner form input[type=checkbox] + label {
+    margin-right: 3rem;
+  }
+  .Sponsor-form .sponsor-inner form p {
+    font-size: 2rem;
+  }
+  .Sponsor-form .sponsor-inner form .amount {
+    border: 3px solid white;
+    width: 22%;
+    height: 36px;
+    font-family: "Akrobat bold";
+  }
+  .Sponsor-form .sponsor-inner form label {
+    font-size: 1.6rem;
+  }
+  .Sponsor-form p {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .Sponsor-form form input[type=text] {
+    font-size: 2rem;
+    margin-bottom: 39px;
+    border-bottom: 2px solid #fff;
+  }
+  .Sponsor-form form input[type=email] {
+    font-size: 2rem;
+    border-bottom: 2px solid #fff;
+  }
+  .Sponsor-form .sponsor button {
+    border: 3px solid #fff;
+  }
+  .Sponsor-form .sponsor a {
+    font-family: "Akrobat ExtraBold";
+    font-size: 2rem;
+  }
+
+  .song p {
+    font-size: 2rem;
+    line-height: 1.2;
+    white-space: pre-line;
+  }
+  .song .song-inner {
+    margin: 55px;
+  }
+  .song a {
+    font-size: 1.8rem;
+    white-space: pre-line;
+    line-height: 1.2;
+    text-align: left;
+    padding: 10px 0;
+  }
+
+  .bg-color p {
+    white-space: pre-line;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .Questions-donate .questions-inner p {
+    font-size: 2rem;
+    line-height: 1.1;
+    white-space: pre-line;
+  }
+  .Questions-donate .contact-links li a {
+    font-size: 2.5rem;
+  }
+
+  .Questions .questions-inner p, .Questions-donate .questions-inner p {
+    font-size: 2rem;
+    line-height: 1.1;
+    white-space: pre-line;
+  }
+  .Questions .contact-links li a, .Questions-donate .contact-links li a {
+    font-size: 2.5rem;
+  }
+
+  footer p {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
